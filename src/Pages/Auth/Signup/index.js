@@ -2,7 +2,6 @@ import { IdentificationIcon } from '@heroicons/react/outline'
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Context/AuthContext'
-import styles from './styles.module.css'
 import validations from './validations'
 
 const Signup = () => {
@@ -35,23 +34,21 @@ const Signup = () => {
   }
 
   return (
-    <div className={styles.formGroupContainer}>
-      <div className={styles.formGroup}>
+    <div >
+      <div >
         <div>
-          <h2 className={styles.title}>Sign Up</h2>
+          <h2 >Sign Up</h2>
         </div>
         <form
           autoComplete="off"
           onSubmit={handleSignUpSubmit}
-          className={styles.signUpForm}
         >
-          <div className={styles.inputGroup}>
+          <div >
             <div>
-            {errors.firstName && <span className={styles.error}>{errors.firstName}</span>}
-              <label className="sr-only">First Name</label>
+            {errors.firstName && <span>{errors.firstName}</span>}
+              <label >First Name</label>
               <input
                 type="text"
-                className={styles.input}
                 onChange={handleSignUpFormChange}
                 value={currentUser.firstName}
                 name="firstName"
@@ -61,11 +58,10 @@ const Signup = () => {
             </div>
 
             <div>
-            {errors.lastName && <span className={styles.error}>{errors.lastName}</span>}
-              <label className="sr-only">Last Name</label>
+            {errors.lastName && <span>{errors.lastName}</span>}
+              <label>Last Name</label>
               <input
                 type="text"
-                className={styles.input}
                 onChange={handleSignUpFormChange}
                 value={currentUser.lastName}
                 name="lastName"
@@ -74,11 +70,10 @@ const Signup = () => {
               
             </div>
             <div>
-            {errors.email && <span className={styles.error}>{errors.email}</span>}
-              <label className="sr-only">Email</label>
+            {errors.email && <span >{errors.email}</span>}
+              <label>Email</label>
               <input
                 type="email"
-                className={styles.input}
                 onChange={handleSignUpFormChange}
                 value={currentUser.email}
                 name="email"
@@ -87,11 +82,10 @@ const Signup = () => {
               
             </div>
             <div>
-            {errors.password && <span className={styles.error}>{errors.password}</span>}
-              <label className="sr-only">Password</label>
+            {errors.password && <span >{errors.password}</span>}
+              <label >Password</label>
               <input
                 type="Password"
-                className={styles.input}
                 onChange={handleSignUpFormChange}
                 value={currentUser.password}
                 name="password"
@@ -100,11 +94,10 @@ const Signup = () => {
               
             </div>
             <div>
-            {errors.passwordConfirm && <span className={styles.error}>{errors.passwordConfirm}</span>}
-              <label className="sr-only">Password Confirm</label>
+            {errors.passwordConfirm && <span>{errors.passwordConfirm}</span>}
+              <label >Password Confirm</label>
               <input
                 type="Password"
-                className={styles.input}
                 onChange={handleSignUpFormChange}
                 value={currentUser.passwordConfirm}
                 name="passwordConfirm"
@@ -112,21 +105,20 @@ const Signup = () => {
               />
               
             </div>
-            <div className={styles.linkBox}>
-              <div className={styles.linkDiv}>
+            <div >
+              <div >
                 <span>
                   Already have an account? Login{" "}
-                  <Link to="/signin" className="text-yellow-400 hover:underline">
+                  <Link to="/signin" >
                     {" "}
                     here.
                   </Link>
                 </span>
               </div>
             </div>
-            <div className="text-center">
-              <button type="submit" className={styles.button}>
+            <div >
+              <button type="submit" >
                 <IdentificationIcon
-                  className="my-auto h-5 w-6"
                   aria1-hidden="true"
                 />
                 Sign Up
